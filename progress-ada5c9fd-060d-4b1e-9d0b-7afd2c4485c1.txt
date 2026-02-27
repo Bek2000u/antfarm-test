@@ -1,0 +1,18 @@
+# Progress Log
+Run: ada5c9fd-060d-4b1e-9d0b-7afd2c4485c1
+Task: Implement FastAPI app with GET / and GET /health plus tests.
+Started: 2026-02-27 02:50 Europe/Berlin
+
+## Codebase Patterns
+- Python tooling in this repo is expected to run from the local virtualenv (`.venv/bin/...`) rather than system Python.
+- Pyproject/tooling config is validated by direct TOML parsing tests under `tests/`.
+
+---
+
+## 2026-02-27 02:52 Europe/Berlin - US-001: Add pyproject.toml with project metadata and tool config
+- Verified `pyproject.toml` includes `[project]` metadata and dependency pins matching `requirements.txt` exactly.
+- Verified tooling sections: `[tool.pytest.ini_options]` with `testpaths = ["."]` and `[tool.mypy]` with `strict = false`, `python_version = "3.12"`.
+- Verified tests in `tests/test_pyproject_config.py` validate required sections, dependency parity, and config values.
+- Files changed in this session: `progress-ada5c9fd-060d-4b1e-9d0b-7afd2c4485c1.txt`.
+- **Learnings:** Existing implementation already satisfied US-001 acceptance criteria; validation/build commands pass using `.venv` executables.
+---
