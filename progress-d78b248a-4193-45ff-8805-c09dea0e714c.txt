@@ -1,0 +1,20 @@
+# Progress Log
+Run: d78b248a-4193-45ff-8805-c09dea0e714c
+Task: Implement FastAPI app with GET / and GET /health plus tests.
+Started: 2026-02-27 02:28 CET
+
+## Codebase Patterns
+- Python project configuration is centralized in `pyproject.toml` for packaging metadata and tool config (`pytest`, `mypy`).
+- Tests are organized under `tests/` and can validate project configuration files directly using `tomllib`.
+- Local setup in this environment requires a virtualenv (`python3 -m venv .venv`) before installing pip dependencies.
+
+---
+
+## 2026-02-27 02:28 CET - US-001: Add pyproject.toml with project metadata and tool config
+- Implemented `pyproject.toml` with `[project]` metadata and dependency pins matching `requirements.txt`.
+- Added `[tool.pytest.ini_options]` with `testpaths = ["."]` and `[tool.mypy]` with `strict = false`, `python_version = "3.12"`.
+- Added tests in `tests/test_pyproject_config.py` to validate required sections, dependency parity with `requirements.txt`, and tool config values.
+- Installed tooling in a local venv, then ran `pip install mypy`, `mypy main.py`, and `pytest -q` successfully.
+- Files changed: `pyproject.toml`, `tests/test_pyproject_config.py`, `progress-d78b248a-4193-45ff-8805-c09dea0e714c.txt`.
+- **Learnings:** In this Ubuntu environment, system pip is PEP 668 managed; use a project-local venv for reproducible developer workflows.
+---
