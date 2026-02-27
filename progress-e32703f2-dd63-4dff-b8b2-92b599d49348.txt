@@ -1,0 +1,17 @@
+# Progress Log
+Run: e32703f2-dd63-4dff-b8b2-92b599d49348
+Task: Add docs/opengoat-antfarm-bridge-smoke.md describing bridge smoke test and acceptance checklist
+Started: 2026-02-27 09:31 CET
+
+## Codebase Patterns
+- Documentation in this repo follows straightforward Markdown structure with clear `##` sections and checkbox lists using `- [ ]`.
+- Docs validation tests are lightweight pytest checks that read Markdown files and assert required headings/checklist markers.
+
+---
+
+## 2026-02-27 09:31 CET - US-001: Add docs/opengoat-antfarm-bridge-smoke.md with bridge smoke test description and acceptance checklist
+- Implemented `docs/opengoat-antfarm-bridge-smoke.md` with required sections: Overview, Bridge Smoke Test Description, Acceptance Checklist, and Notes.
+- Added acceptance checklist items covering dispatch trigger, payload format, Antfarm acknowledgement, unreachable Antfarm error handling, idempotency, and logging/observability.
+- Added `tests/test_docs_bridge_smoke.py` to validate file existence, UTF-8 readability, required headings, and checklist item presence.
+- **Learnings:** Existing quality checks in this repo can be run directly via `.venv/bin/mypy` and `.venv/bin/pytest`.
+---
