@@ -1,0 +1,17 @@
+# Progress Log
+Run: 0d84c544-69fa-4ce9-a850-84b54c40c838
+Task: Implement FastAPI app with GET / and GET /health plus tests.
+Started: 2026-02-27 03:12 Europe/Berlin
+
+## Codebase Patterns
+- FastAPI app entrypoint is a top-level `main.py` exposing `app` for both runtime and tests.
+- Tests run with pytest from repo root; in this repository, tests may need to prepend repo root to `sys.path` before importing `main`.
+
+---
+
+## 2026-02-27 03:13 Europe/Berlin - US-001: Add tests for GET / root endpoint
+- Added `tests/test_main.py` using `fastapi.testclient.TestClient` with `main:app` import.
+- Implemented two tests for `GET /`: one verifies HTTP 200 and one verifies JSON `{"message": "hello world"}`.
+- Files changed: `tests/test_main.py`, `progress-0d84c544-69fa-4ce9-a850-84b54c40c838.txt`.
+- **Learnings:** Current pytest import path resolution required explicitly adding repo root to `sys.path` for importing `main`.
+---
