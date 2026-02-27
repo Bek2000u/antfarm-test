@@ -1,0 +1,16 @@
+.env
+node_modules/
+*.key
+*.pem
+*.secret
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+dist/
+.DS_Store
+*.log
+progress-*.txt
