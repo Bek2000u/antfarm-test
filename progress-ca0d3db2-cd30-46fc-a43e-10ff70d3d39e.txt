@@ -1,0 +1,16 @@
+# Progress Log
+Run: ca0d3db2-cd30-46fc-a43e-10ff70d3d39e
+Task: Add CI baseline for this repo and document CI behavior in README
+Started: 2026-02-28 01:10:54 CET
+
+## Codebase Patterns
+- Repository uses lightweight pytest checks that validate documentation/workflow content by asserting exact expected phrases in tracked files.
+
+---
+
+## 2026-02-28 01:10:54 CET - US-002: Document CI behavior in README
+- Added a concise `CI` section to `README.md` that names `.github/workflows/ci.yml`, states pull request + default-branch push triggers, and documents Python 3.12 with `pytest -q`.
+- Added `tests/test_readme_ci.py` to mechanically verify the README CI section heading and required CI behavior details.
+- Files changed: `README.md`, `tests/test_readme_ci.py`, `progress-ca0d3db2-cd30-46fc-a43e-10ff70d3d39e.txt`.
+- **Learnings:** For this repo’s minimal style, short direct wording plus phrase-based pytest assertions keeps docs checks clear and maintainable.
+---
